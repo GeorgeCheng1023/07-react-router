@@ -1,4 +1,4 @@
-import {useParams,Switch} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import {Route} from 'react-router-dom'
 import Comments from '../components/comments/Comments'
 import HighlightedQuote from '../components/quotes/HighlightedQuote'
@@ -17,11 +17,17 @@ const QuoteDetail = props => {
     <>
       <HighlightedQuote text={foundQuote.text} author={foundQuote.author}/>
       <Link className="btn" to='/quote'>Back to All Quote</Link>
-      <Switch>
+      <Route path={`/quote/${params.quoteID}` }>
+        <div className='centered'>
+          <Link className="btn--flat" to={`/quote/${params.quoteID}/comments`}>
+            Load Comments
+          </Link>
+        </div>
+      </Route>
         <Route path={`/quote/${params.quoteID}/comments`} >
           <Comments/>
         </Route>      
-      </Switch>
+
     </>
     )
   }
