@@ -9,11 +9,11 @@ function App() {
   return (
     <Layout>
       <Routes>
-      <Route path="/" elements={<Navigate to="/quote"/>}/>
-      <Route path="/quote" elements={<AllQuotes />}/>
-      <Route path="/quote/:quoteID" elements={<QuoteDetail/>}/>
-      <Route path="/new" elements={<NewQuotes />}/>
-      <Route path="*" elements={<NotFound />}/>
+      <Route path="/" element={<Navigate to="/quote"/>}/>
+      <Route path="/quote" element={<AllQuotes />}/>
+      <Route path="/quote/:quoteID/*" element={<QuoteDetail/>}/>
+      <Route path="/new" element={<NewQuotes />}/>
+      <Route path="*" element={<NotFound />}/>
       </Routes>
     </Layout>
   );
