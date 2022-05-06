@@ -1,5 +1,3 @@
-import {Link, Route} from 'react-router-dom'
-import NewQuotes from './NewQuotes'
 import QuoteList from '../components/quotes/QuoteList'
 
 const dummy_quotes = [
