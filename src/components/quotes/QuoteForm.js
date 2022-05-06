@@ -30,11 +30,11 @@ const QuoteForm = (props) => {
 
   return (
     <>
-    <Prompt
+    {/* <Prompt
       when={isEntering}
       message={(location) =>
         "Are you sure you want to leave? Your data will be lost!"}
-      />
+      /> */}
       <Card>
         <form
           className={classes.form}
