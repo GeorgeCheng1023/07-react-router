@@ -1,4 +1,4 @@
-import {Link, Route, useParams, useRouteMatch, Routes} from 'react-router-dom'
+import {Link, Route, useParams, useMatch, Routes} from 'react-router-dom'
 import Comments from '../components/comments/Comments'
 import HighlightedQuote from '../components/quotes/HighlightedQuote'
 
@@ -9,7 +9,7 @@ const dummy_quotes = [
 
 const QuoteDetail = props => {
   const params = useParams()
-  const match = useRouteMatch()
+  const match = useMatch()
   const foundQuote = dummy_quotes.find(q => q.id === params.quoteID)
   
   return (
