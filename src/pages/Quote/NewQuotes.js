@@ -1,4 +1,4 @@
-import QuoteForm from '../components/quotes/QuoteForm'
+import QuoteForm from '../../components/quotes/QuoteForm'
 const NewQuotes = props => {
   const addQuoteHandler = event => {
     console.log('getadd')

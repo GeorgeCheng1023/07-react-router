@@ -13,7 +13,7 @@ const MainNavigation = props => {
               <NavLink to="/quote" className={(navData => navData.isActive) ? 'active' : ''}>All</NavLink>
             </li>
             <li>
-              <NavLink to="/new" className={(navData => navData.isActive) ? 'active' : ''}>New</NavLink>
+              <NavLink to="/quote/new" className={(navData => navData.isActive) ? 'active' : ''}>New</NavLink>
             </li>
           </ul>
         </nav>

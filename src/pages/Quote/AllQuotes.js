@@ -1,4 +1,4 @@
-import QuoteList from '../components/quotes/QuoteList'
+import QuoteList from '../../components/quotes/QuoteList'
 
 const dummy_quotes = [
   {id: 'q1', author: 'John', text: 'This is insane!'},

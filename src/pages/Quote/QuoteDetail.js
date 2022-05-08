@@ -1,6 +1,6 @@
 import {Link, Route, useParams, Routes} from 'react-router-dom'
-import Comments from '../components/comments/Comments'
-import HighlightedQuote from '../components/quotes/HighlightedQuote'
+import Comments from '../../components/comments/Comments'
+import HighlightedQuote from '../../components/quotes/HighlightedQuote'
 
 const dummy_quotes = [
   {id: 'q1', author: 'John', text: 'This is insane!'},
@@ -15,15 +15,12 @@ const QuoteDetail = props => {
     <>
       <HighlightedQuote text={foundQuote.text} author={foundQuote.author}/>
       <Link className="btn" to='/quote'>Back to All Quote</Link>
-      <Routes>
-        <Route path="/" element={
-          <div className='centered'>
+      <div className='centered'>
             <Link className="btn--flat" to='comments'>
               Load Comments
             </Link>
-          </div>
-        }> 
-        </Route>
+      </div>
+      <Routes>
         <Route path="comments"  element={
           <Comments/>
         }>
